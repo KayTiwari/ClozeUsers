@@ -41,9 +41,10 @@ const UserContainer = () => {
   useEffect(() => {
     axios
       .get(
-        `https://randomuser.me/api/?page=${currentPage}&results=${results}&seed=abc`
+        `http://localhost:3001/users?page=${currentPage}&results=${results}`
       )
       .then((response) => {
+        // console.log(response);
         setObtainedUsers(response.data.results);
         return response.data.results;
       })
@@ -51,7 +52,6 @@ const UserContainer = () => {
         console.log(error);
       });
 
-    // console.log(obtainedUsers);
     DisplayUsers();
   }, [currentPage, results]);
 
