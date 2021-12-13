@@ -1,3 +1,12 @@
+App made for the comapny Clozd
+
+Start server by going to server folder and running: `node index.js`
+
+Then use `npm start` on root directory to start react app
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
