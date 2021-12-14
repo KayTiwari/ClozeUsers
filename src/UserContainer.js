@@ -6,10 +6,14 @@ import Pagination from "./Pagination";
 import Results from "./Results";
 
 const UserContainer = () => {
+  // CLOZD_SUGGESTION: It's hard to know what "value" is until later in the file
+
   const [value, setValue] = useState("");
   const [obtainedUsers, setObtainedUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [results, setResults] = useState(12);
+
+  // CLOZD_SUGGESTION: Is the commented code below neccessary?
 
   // Filters listed users as search bar is typed in
   //   const handleChange = (e) => {
@@ -30,6 +34,8 @@ const UserContainer = () => {
         <UserDisp key={i} item={item}></UserDisp>
       ));
     } else {
+      // CLOZD_SUGGESTION: Is the comment below important to keep?
+
       // console.log(obtainedUsers);
       return obtainedUsers?.map((item, i) => (
         <UserDisp key={i} item={item}></UserDisp>
@@ -44,6 +50,8 @@ const UserContainer = () => {
         `http://localhost:3001/users?page=${currentPage}&results=${results}`
       )
       .then((response) => {
+        // CLOZD_SUGGESTION: Is the comment below important to keep?
+
         // console.log(response);
         setObtainedUsers(response.data.results);
         return response.data.results;
@@ -51,8 +59,9 @@ const UserContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-
-    DisplayUsers();
+      
+      // CLOZD_SUGGESTION: The function DisplayUsers() is not needed here. Down in the return statement it is called each time state updates.
+      DisplayUsers(); 
   }, [currentPage, results]);
 
   return (

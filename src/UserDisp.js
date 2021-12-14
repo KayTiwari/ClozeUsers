@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./App.css";
 import { AppContext } from "./AppContext";
 
+// CLOZD_SUGGESTION: This seems like stand alone component. Should this go inside the 'components' folder?
+
+
 // Displays user card
 const UserDisp = (props) => {
   let userCard;
@@ -13,6 +16,9 @@ const UserDisp = (props) => {
     context.setSelectedUser(props);
     navigate("./Profile");
   }
+
+  // CLOZD_SUGGESTION: Is the comment below important to keep?
+
 
 //   console.log(props);
 

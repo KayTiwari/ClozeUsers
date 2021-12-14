@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 
+// CLOZD_SUGGESTION: This seems like stand alone component. Should this go inside the 'components' folder?
+
+
 const Pagination = ({ currentPage, setCurrentPage }) => {
   const nextPage = (nextPage) => {
     if (nextPage) {

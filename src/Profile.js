@@ -4,12 +4,17 @@ import NavBar from "./components/NavBar";
 import { AppContext } from "./AppContext";
 import './App.css'
 
+// CLOZD_SUGGESTION: This seems like stand alone component. Should this go inside the 'components' folder?
+
+
 // User profile
 const Profile = (props) => {
   const context = useContext(AppContext);
 
+  // CLOZD_SUGGESTION: We notice a lot of console logs that may not be neccessary in this file
   console.log(context.selectedUser);
 
+  // CLOZD_SUGGESTION: It is hard to know what this variable (easyProp) represents until later in the file. 
   let easyProp = context.selectedUser.item;
 
   console.log(easyProp);
@@ -75,6 +80,7 @@ const Profile = (props) => {
 };
 
 export default Profile;
+// CLOZD_SUGGESTION: Are the comments below important to keep?
 
 //large picture
 //first and last name

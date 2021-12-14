@@ -1,5 +1,8 @@
 import React from "react";
 
+// CLOZD_SUGGESTION: This seems like stand alone component. Should this go inside the 'components' folder?
+
+
 // Changes number of users displayed on page
 const Results = ({ results, setResults }) => {
   return (
