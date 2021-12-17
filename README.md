@@ -1,4 +1,4 @@
-App made for the comapny Clozd
+App made for the company Clozd
 
 Start server by going to server folder and running: `node index.js`
 
